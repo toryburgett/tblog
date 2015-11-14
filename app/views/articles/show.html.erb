@@ -1,7 +1,24 @@
 <h2>Showing Article <%= link_to "(edit)", edit_article_path(@article) %> <%= link_to "(destroy)", article_path(@article), method: :delete, data: { confirm: 'Are you sure?'} %></h2>
-<div>
+<div class="article">
   <h2><%= @article.title %></h2>
   <p><%= @article.text %></p>
+</div>
+
+<div class="comment-form">
+  <h2>Add a comment</h2>
+  <%= form_for ([@article, @article.comments.build]) do |f| %>
+    <p>
+      <%= f.label :commenter %><br>
+      <%= f.text_field :commenter %>
+    </p>
+    <p>
+      <%= f.label :body %><br>
+      <%= f.text_area :body %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
 </div>
 
 <%= link_to "Back to Articles", articles_path() %>
