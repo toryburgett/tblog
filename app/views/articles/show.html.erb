@@ -1,4 +1,4 @@
-<h2>Showing Article <%= link_to "(edit)", edit_article_path(@article) %></h2>
+<h2>Showing Article <%= link_to "(edit)", edit_article_path(@article) %> <%= link_to "(destroy)", article_path(@article), method: :delete, data: { confirm: 'Are you sure?'} %></h2>
 <div>
   <h2><%= @article.title %></h2>
   <p><%= @article.text %></p>
