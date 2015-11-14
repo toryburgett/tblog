@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+
+  http_basic_authenticate_with name: "Person", password: "password", only: [:destroy]
+
   def index
   end
 
