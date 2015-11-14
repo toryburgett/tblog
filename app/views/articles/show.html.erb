@@ -1,12 +1,21 @@
-<h2>Showing Article <%= link_to "(edit)", edit_article_path(@article) %> <%= link_to "(destroy)", article_path(@article), method: :delete, data: { confirm: 'Are you sure?'} %></h2>
-<div class="article">
+<div class="contentTitle">
+  <h2>Showing Article <%= link_to "(edit)", edit_article_path(@article) %> <span class="articleDelete"> <%= link_to "(destroy)", article_path(@article), method: :delete, data: { confirm: 'Are you sure?'} %></span></h2>
+</div>
+
+<div class="articleSub">
   <h2><%= @article.title %></h2>
   <p><%= @article.text %></p>
 </div>
 
-<div class="comment-form">
-  <h2>Add a comment</h2>
-  <%= form_for ([@article, @article.comments.build]) do |f| %>
+<div class="commentWrapper">
+  <div class="commentAll">
+    <h2>Comments</h2>
+    <%= render @article.comments %>
+  </div>
+
+  <div class="commentForm">
+    <h2>Add a comment</h2>
+    <%= form_for ([@article, @article.comments.build]) do |f| %>
     <p>
       <%= f.label :commenter %><br>
       <%= f.text_field :commenter %>
@@ -18,7 +27,9 @@
     <p>
       <%= f.submit %>
     </p>
-  <% end %>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "Back to Articles", articles_path() %>
+<div class="contentEndLinks">
+  <%= link_to "Back to Articles", articles_path() %>
+</div>

@@ -13,3 +13,57 @@
  *= require_tree .
  *= require_self
  */
+
+/* **************************************** */
+/* ******** The Three Big Sections ******** */
+.header{
+  border: 2px solid pink;
+}
+.content{
+  border: 2px solid black;
+}
+.footer{
+  border: 2px solid lemonchiffon;
+}
+/* **************************************** */
+/* **************************************** */
+
+/* **************************************** */
+/* ******** Article Sections ******** */
+.articleSub{
+  border: 2px solid green;
+}
+.articleForm{
+  border: 2px solid yellow;
+}
+.articleAll{
+  border: 2px solid magenta;
+}
+.articleDelete{
+  border: 2px solid lightSkyBlue;
+}
+/* **************************************** */
+/* **************************************** */
+
+/* **************************************** */
+/* ******** Comment Sections ******** */
+.commentSub{
+  border: 2px solid blue;
+}
+.commentForm{
+  border: 2px solid red;
+}
+.commentWrapper{
+  border: 2px solid purple;
+}
+.commentAll{
+  border: 2px solid orange;
+}
+/* **************************************** */
+/* **************************************** */
+.contentTitle{
+  border: 2px solid darksalmon;
+}
+.contentEndLinks{
+  border: 2px solid lime;
+}

@@ -1,8 +1,11 @@
-<h1>Articles - <%= link_to "(+)", new_article_path() %></h1>
-
-<% @articles.each do |article| %>
-  <div>
-    <h2><%= link_to article.title, article_path(article) %> <%= link_to "(edit)", edit_article_path(article) %> <%= link_to "(destroy)", article_path(article), method: :delete, data: { confirm: 'Are you sure?'} %></h2>
-    <p><%= article.text %></p>
-  </div>
-<% end %>
+<div class="contentTitle">
+  <h1>Articles - <%= link_to "(+)", new_article_path() %></h1>
+</div>
+<div class="articleAll">
+  <% @articles.each do |article| %>
+    <div class="articleSub">
+      <h2><%= link_to article.title, article_path(article) %> <%= link_to "(edit)", edit_article_path(article) %>  <span class="articleDelete"><%= link_to "(destroy)", article_path(article), method: :delete, data: { confirm: 'Are you sure?'} %></span></h2>
+      <p><%= article.text %></p>
+    </div>
+  <% end %>
+</div>

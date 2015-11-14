@@ -7,13 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="header">
-  <h1>Blog</h1>
-  <ul>
-    <li><%= link_to 'Articles', articles_path() %></li>
-  </ul>
-</div>
-<%= yield %>
-
+  <div class="header">
+    <h1>Blog</h1>
+    <ul>
+      <li><%= link_to 'Articles', articles_path() %></li>
+    </ul>
+  </div>
+  <div class="content">
+    <%= yield %>
+  </div>
+  <div class="footer">
+    <p>made by tory</p>
+  </div>
 </body>
 </html>

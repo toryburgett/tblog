@@ -1,6 +1,11 @@
-<h2> Edit Article </h2>
+<div class="contentTitle">
+  <h2> Edit Article </h2>
+</div>
 
 <%= render 'form' %>
 
-<h2><%= link_to "(delete article)", article_path(@article), method: :delete, data: { confirm: 'Are you sure?'} %></h2>
+<h2 class="articleDelete"><%= link_to "(delete article)", article_path(@article), method: :delete, data: { confirm: 'Are you sure?'} %></h2>
+
+<div class="contentEndLinks">
 <%= link_to "Back to Articles", articles_path() %>
+</div>

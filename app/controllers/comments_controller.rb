@@ -13,23 +13,14 @@ class CommentsController < ApplicationController
 
   def create
     @article = Article.find(params[:article_id])
-    @comment = Comment.create(comment_params)
+    @comment = @article.comments.create(comment_params)
     redirect_to article_path(@article)
   end
 
   def update
-    @comment = Comment.find(params[:id])
-    if @comment.update(comment_params)
-      redirect_to @comment
-    else
-      render 'edit'
-    end
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
-    @comment.destroy
-    redirect_to articles_path()
   end
 
   private
