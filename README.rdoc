@@ -1,5 +1,6 @@
-== Tory's Blog
+# Tory's Blog
 
 This is Tory's Blog
 
-I am currently running through the ruby tutorial, see  [Here](http://guides.rubyonrails.org/getting_started.html)
+I am currently running through the ruby tutorial:
+http://guides.rubyonrails.org/getting_started.html
