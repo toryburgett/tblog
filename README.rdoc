@@ -2,4 +2,4 @@
 
 This is Tory's Blog
 
-I am currently running through the ruby tutorial, see ([here](http://guides.rubyonrails.org/getting_started.html)) please work
+I am currently running through the ruby tutorial, see  [Here](http://guides.rubyonrails.org/getting_started.html)
